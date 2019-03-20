@@ -1,4 +1,6 @@
 {
+  "name": "corgidisco-aws-nodejs-typescript",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "source-map-support": "^0.5.10"
