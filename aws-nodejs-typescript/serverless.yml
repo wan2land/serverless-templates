@@ -1,0 +1,19 @@
+service:
+  name: aws-nodejs-typescript
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: ${env:AWS_DEFAULT_REGION, 'us-east-1'}
+
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - http:
+          method: get
+          path: hello

@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "dependencies": {
+    "source-map-support": "^0.5.10"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/node": "^10.12.18",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "eslint": "^5.15.3",
+    "eslint-loader": "^2.1.2",
+    "serverless-offline": "^4.9.2",
+    "serverless-webpack": "^5.2.0",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.0"
+  }
+}

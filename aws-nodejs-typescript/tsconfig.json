@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": [
+      "es2017"
+    ],
+    "pretty": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
