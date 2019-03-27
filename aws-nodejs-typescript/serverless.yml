@@ -7,8 +7,10 @@ plugins:
 
 provider:
   name: aws
+  stage: ${opt:stage, 'dev'}
   runtime: nodejs8.10
   region: ${env:AWS_DEFAULT_REGION, 'us-east-1'}
+  environment: ${file(env.${self:provider.stage}.yml)}
 
 functions:
   hello:
