@@ -1,0 +1,27 @@
+service:
+  name: aws-nodejs-typescript
+
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+provider:
+  name: aws
+  stage: ${opt:stage, 'dev'}
+  runtime: nodejs8.10
+  region: ${env:AWS_DEFAULT_REGION, 'us-east-1'}
+  environment: ${file(env.${self:provider.stage}.yml)}
+
+functions:
+  home:
+    handler: src/handler.home
+    events:
+      - http:
+          method: get
+          path: /
+  graphql:
+    handler: src/handler.graphql
+    events:
+      - http:
+          method: any
+          path: /graphql
