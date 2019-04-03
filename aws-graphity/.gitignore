@@ -12,4 +12,4 @@ jspm_packages
 .envrc
 
 # production env
-env.prod.yml
+.env.prod.yml
