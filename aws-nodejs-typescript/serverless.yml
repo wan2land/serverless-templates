@@ -12,6 +12,10 @@ provider:
   region: ${env:AWS_DEFAULT_REGION, 'us-east-1'}
   environment: ${file(env.${self:provider.stage}.yml)}
 
+custom:
+  webpack:
+    includeModules: true
+
 functions:
   hello:
     handler: src/handler.hello
